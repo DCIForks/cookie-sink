@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Sink</title>
+
+  <style>
+    body {
+      background-color: #000;
+      margin: 0;
+    }
+
+    main {
+      max-width: 35em;
+      min-height: 100vh;
+      text-align: center;
+      background-color: #fff;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      padding-top: 0.5em;
+    }
+  </style>
+  
+</head>
+<body>
+  <main>
+    <h1>Cookie Sink</h1>
+    <figure>
+      <img
+        src="https://cookie-source.herokuapp.com/images/web_beacon.png"
+        alt="web beacon from cookie-source.herokuapp.com is unavailable"
+      >
+      <figcaption>
+        <h3>
+          Image from a third-party site that sets cross-site cookies
+        </h3>
+        <code>
+          https://cookie-source.herokuapp.com/images/web_beacon.png</code>
+      </figcaption>
+    </figure>
+    <p id="cookie"></p>
+    <a href="https://cookie-source.herokuapp.com">Go to Source</a>
+  </main>
+
+  <script>
+    const cookies = decodeURIComponent(document.cookie) || '""';
+
+    document.getElementById("cookie")
+            .innerText = `document.cookie: ${cookies}`
+  </script>
+</body>
+</html>

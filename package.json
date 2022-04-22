@@ -1,0 +1,20 @@
+{
+  "name": "cookie-sink",
+  "version": "1.0.0",
+  "description": "Demo of an HTTPS site which requests an image from another HTTPS site, which sets a cookie with the options {sameSite: 'none', secure: true}.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }
+}

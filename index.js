@@ -5,8 +5,14 @@
  * This server does not set any cookies itself, so `document.cookie`
  * will always be an empty object.
  *
+ * Deployment
+ * ——————————
  * This app is deployed at https://cookie-sink.herokuapp.com/
+ * Use `heroku logs -n 20` to see the last 20 lines of the logs
+ * created on the Heroku server.
  *
+ * Testing Locally
+ * ———————————————
  * You can also erve the page locally using
  *
  *   npm start # from the cookie-sink directory
@@ -15,6 +21,8 @@
  * OR
  *   npm run start:sink # from the parent directory
  *
+ * Viewing Cookies
+ * ———————————————
  * When you visit the page, use the Developer Tools Inspector to
  * view the cookies that have been set for third-party domains:
  *

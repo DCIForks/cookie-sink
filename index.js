@@ -50,7 +50,15 @@ app.listen(PORT, () => {
 // Log all cookies set by this server. This server sets no cookies,
 // so the output should be an empty object.
 const showCookies = (request, response, next) => {
+  const url = request.originalUrl;
+  const protocol = request.protocol;
+  const host = request.headers.host;
+
+  console.log(`======
+Request for ${protocol}://${host}${url}`);
+
   console.log("request.cookies:", request.cookies);
+  console.log("======\n")
   next()
 }
 
